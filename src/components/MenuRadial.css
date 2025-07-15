@@ -1,0 +1,54 @@
+.radial-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+  position: relative;
+}
+
+.center-button {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background-color: #007bff;
+  color: white;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+  transition: 0.3s;
+  text-align: center;
+}
+
+.options {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  pointer-events: none;
+}
+
+.option {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background-color: #f8f9fa;
+  color: #333;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  transform: rotate(calc(var(--i) * 90deg)) translate(150px) rotate(calc(var(--i) * -90deg));
+  opacity: 0;
+  transition: 0.3s;
+  pointer-events: auto;
+  border: 1px solid #ccc;
+}
+
+.center-button:hover .option {
+  opacity: 1;
+}
